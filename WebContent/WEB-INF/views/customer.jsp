@@ -29,19 +29,19 @@
 				</thead>
 				<tbody>
 					<datalex:reservation />
-					<logic:iterate name="reservation" property="customers"
-						id="cust" indexId="index">
+					<logic:iterate name="reservation" property="customers" id="cust"
+						indexId="index">
 						<logic:iterate name="cust" property="payments" id="pay">
-						<tr>
-							<td><bean:write name="index" /></td>
-							<td><bean:write name="cust" property="firstName" /></td>
-							<td><bean:write name="cust" property="lastName" /></td>
-							<td><bean:write name="cust" property="email" /></td>
-							<td><bean:write name="cust" property="phone" />
-							<td><bean:write name="pay" property="amountPaid" /></td>
-							<td><bean:write name="pay" property="typeCode" /></td>
-							<td><bean:write name="pay" property="currencyCode" /></td>
-						</tr>
+							<tr>
+								<td><bean:write name="index" /></td>
+								<td><bean:write name="cust" property="firstName" /></td>
+								<td><bean:write name="cust" property="lastName" /></td>
+								<td><bean:write name="cust" property="email" /></td>
+								<td><bean:write name="cust" property="phone" />
+								<td><bean:write name="pay" property="amountPaid" /></td>
+								<td><bean:write name="pay" property="typeCode" /></td>
+								<td><bean:write name="pay" property="currencyCode" /></td>
+							</tr>
 						</logic:iterate>
 					</logic:iterate>
 				</tbody>
