@@ -30,10 +30,8 @@ public class ReservationTag extends TagSupport {
 		HttpServletRequest request = (HttpServletRequest) pageContext.getRequest();
 		ServletContext context = request.getSession().getServletContext();
 		String fileName = context.getRealPath("/WEB-INF/" + "Reservations.xml");
-		System.out.println(fileName);
 		IXmlDAO iXmlDAO = DAOFactory.getClassFromFactory();
 		Reservation reservation = iXmlDAO.getReservation(fileName);
-		System.out.println(reservation);
 		pageContext.setAttribute("reservation", reservation);
 		return SKIP_BODY;
 	}

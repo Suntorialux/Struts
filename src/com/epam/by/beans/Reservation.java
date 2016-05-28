@@ -30,6 +30,12 @@ public class Reservation {
 	@XmlElement(name = "ResComponent")
 	private List<ResComponents> resComponents = new ArrayList<>();
 
+	@XmlElement(name = "Customer")
+	private List<Customer> customers = new ArrayList<>();
+
+	@XmlElement(name = "FareFamily")
+	private List<FareFamily> fareFamilies = new ArrayList<>();
+
 	public Reservation() {
 	}
 
@@ -37,11 +43,15 @@ public class Reservation {
 	 * @param code
 	 * @param description
 	 * @param resComponents
+	 * @param customers
+	 * @param fareFamilies
 	 */
-	public Reservation(String code, String description, List<ResComponents> resComponents) {
+	public Reservation(String code, String description, List<ResComponents> resComponents, List<Customer> customers, List<FareFamily> fareFamilies) {
 		this.code = code;
 		this.description = description;
 		this.resComponents = resComponents;
+		this.customers = customers;
+		this.fareFamilies = fareFamilies;
 	}
 
 	/**
@@ -89,6 +99,36 @@ public class Reservation {
 		this.resComponents = resComponents;
 	}
 
+	/**
+	 * @return the customers
+	 */
+	public List<Customer> getCustomers() {
+		return customers;
+	}
+
+	/**
+	 * @param customers
+	 *            the customers to set
+	 */
+	public void setCustomers(List<Customer> customers) {
+		this.customers = customers;
+	}
+
+	/**
+	 * @return the fareFamilies
+	 */
+	public List<FareFamily> getFareFamilies() {
+		return fareFamilies;
+	}
+
+	/**
+	 * @param fareFamilies
+	 *            the fareFamilies to set
+	 */
+	public void setFareFamilies(List<FareFamily> fareFamilies) {
+		this.fareFamilies = fareFamilies;
+	}
+
 	/*
 	 * (non-Javadoc)
 	 * 
@@ -96,7 +136,6 @@ public class Reservation {
 	 */
 	@Override
 	public String toString() {
-		return "Reservation [code=" + code + ", description=" + description + ",\n resComponents=" + resComponents + "]";
+		return "Reservation [code=" + code + ", description=" + description + ", resComponents=" + resComponents + ", customers=" + customers + ", fareFamilies=" + fareFamilies + "]";
 	}
-
 }

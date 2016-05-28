@@ -6,7 +6,7 @@
         version="2.1">
 
     <tlib-version>1.0</tlib-version>
-    <short-name>myTag</short-name>
+    <short-name>datalex</short-name>
     <uri>custom.tld</uri>
   
     <tag>

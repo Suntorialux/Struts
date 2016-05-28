@@ -6,18 +6,34 @@
 <struts-config>
 	<form-beans>
 		<form-bean name="loginForm" type="com.epam.by.forms.LoginForm" />
+		<form-bean name="logoutForm" type="com.epam.by.forms.LogoutForm" />
 	</form-beans>
- 
+
 	<action-mappings>
-		<action path="/login" 
-				name="loginForm"
-				type="com.epam.by.actions.LoginAction"
-				input="/WEB-INF/views/login.jsp" 
-				scope="request"
-				validate="true">
-			<forward name="success" path="/WEB-INF/views/welcome.jsp"></forward>
+		<action path="/login"
+		 	name="loginForm" 
+			type="com.epam.by.actions.LoginAction"
+			input="/WEB-INF/views/login.jsp" 
+			scope="request"
+			validate="true">
+			<forward name="success" path="/reservation.do" />
 		</action>
+		<action path="/logout"
+				name="logoutForm" 
+				type="com.epam.by.actions.LogoutAction">
+			<forward name="success" path="/" redirect="true" />
+		</action>
+		<action path="/customer" type="com.epam.by.actions.CustomerAction">
+			<forward name="success" path="/WEB-INF/views/customer.jsp" />
+		</action>
+		<action path="/reservation" type="com.epam.by.actions.ReservationAction">
+			<forward name="success" path="/WEB-INF/views/reservation.jsp" />
+		</action>
+		<action path="/fareFamily" type="com.epam.by.actions.FareFamilyAction">
+			<forward name="success" path="/WEB-INF/views/fareFamily.jsp" />
+		</action>
+		
 	</action-mappings>
- 
-	<message-resources parameter="com.epam.by.i18n.MessageBundle"/>
+
+	<message-resources parameter="com.epam.by.i18n.MessageBundle" />
 </struts-config>

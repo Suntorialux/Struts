@@ -22,7 +22,7 @@
 					<html:text property="login" styleClass="form-control col-sm-3"
 						styleId="inputLogin" />
 				</div>
-				<div class="text-warning col-sm-3">
+				<div class="text-danger col-sm-3">
 					<html:errors property="login" />
 				</div>
 			</div>
@@ -34,7 +34,7 @@
 					<html:password property="password"
 						styleClass="form-control col-sm-3" styleId="inputPassword" />
 				</div>
-				<div class="text-warning col-sm-3">
+				<div class="text-danger col-sm-3">
 					<html:errors property="password" />
 				</div>
 			</div>

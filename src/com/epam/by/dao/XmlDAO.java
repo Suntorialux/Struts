@@ -20,19 +20,18 @@ public class XmlDAO implements IXmlDAO {
 
 	@Override
 	public Reservation getReservation(String fileName) {
-		Reservation result = new Reservation();
+		Reservation reservation = new Reservation();
 		try {
 			File file = new File(fileName);
 			JAXBContext jaxbContext = JAXBContext.newInstance(Reservation.class);
 
 			Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
-			result = (Reservation) jaxbUnmarshaller.unmarshal(file);
+			reservation = (Reservation) jaxbUnmarshaller.unmarshal(file);
 
 		} catch (JAXBException e) {
 			e.printStackTrace();
 		}
 
-		return result;
-
+		return reservation;
 	}
 }
