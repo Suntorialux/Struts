@@ -10,14 +10,14 @@
 				<ul class="breadcrumb">
 					<li><bean:message key="login.jsp.promt.hello" /> <bean:write
 							name="user" property="login" /></li>
-					<li><html:link href="reservation.do">
+					<li><html:link action="datalex/reservation.do">
 							<bean:message key="reservation.jsp.button" />
 						</html:link></li>
 						
-					<li><html:link href="customer.do">
+					<li><html:link action="datalex/customer.do">
 							<bean:message key="customer.jsp.customerPage" />
 						</html:link></li>
-					<li><html:link href="fareFamily.do">
+					<li><html:link action="datalex/fareFamily.do">
 							<bean:message key="fareFamily.jsp.button" />
 						</html:link></li>
 
