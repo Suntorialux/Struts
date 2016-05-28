@@ -46,6 +46,10 @@
 				</div>
 			</div>
 		</html:form>
+		<html:form action="/changeLocale">
+			<html:submit property="language" styleClass="btn btn-success">English</html:submit>
+			<html:submit property="language" styleClass="btn btn-success"><bean:message key="login.jsp.promt.russian" /></html:submit>
+		</html:form>
 	</div>
 </body>
 </html:html>

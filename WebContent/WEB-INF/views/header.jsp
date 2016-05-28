@@ -13,7 +13,7 @@
 					<li><html:link action="datalex/reservation.do">
 							<bean:message key="reservation.jsp.button" />
 						</html:link></li>
-						
+
 					<li><html:link action="datalex/customer.do">
 							<bean:message key="customer.jsp.customerPage" />
 						</html:link></li>
@@ -21,9 +21,10 @@
 							<bean:message key="fareFamily.jsp.button" />
 						</html:link></li>
 
+
 					<li class="text-right col-sm-offset-9"><html:form
 							action="/logout">
-							<html:submit styleClass="btn btn-link" >
+							<html:submit styleClass="btn btn-link">
 								<bean:message key="login.jsp.promt.logout" />
 							</html:submit>
 						</html:form></li>

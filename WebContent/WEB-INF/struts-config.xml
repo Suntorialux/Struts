@@ -7,6 +7,7 @@
 	<form-beans>
 		<form-bean name="loginForm" type="com.epam.by.forms.LoginForm" />
 		<form-bean name="logoutForm" type="com.epam.by.forms.LogoutForm" />
+		<form-bean name="changeLocaleForm" type="com.epam.by.forms.LocaleForm" />
 	</form-beans>
 
 	<action-mappings>
@@ -31,6 +32,12 @@
 		</action>
 		<action path="/datalex/fareFamily" type="com.epam.by.actions.FareFamilyAction">
 			<forward name="success" path="/WEB-INF/views/fareFamily.jsp" />
+		</action>
+		<action path="/changeLocale" 
+				name="changeLocaleForm"
+				type="com.epam.by.actions.LocalAction"
+				input="/WEB-INF/views/login.jsp" >
+			<forward name="success" path="/"/>
 		</action>
 		
 	</action-mappings>
