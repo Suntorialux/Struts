@@ -9,7 +9,7 @@ import com.epam.by.beans.Reservation;
  * @author Andrei Yahorau
  *
  */
-public interface IXmlDAO {
+public interface IReservationDAO {
 
 	Reservation getReservation(String fileName);
 

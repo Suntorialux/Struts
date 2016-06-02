@@ -1,8 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8"%>
 <%@ taglib uri="http://struts.apache.org/tags-html" prefix="html"%>
-<%@ taglib uri="http://struts.apache.org/tags-bean" prefix="bean"%>
-<%@ taglib uri="http://struts.apache.org/tags-logic" prefix="logic"%>
-<%@ taglib uri="custom.tld" prefix="datalex"%>
+<%@ taglib uri="http://struts.apache.org/tags-tiles" prefix="tiles"%>
 
 
 <html:html>
@@ -12,33 +10,9 @@
 </head>
 <body>
 	<div class="container">
-		<jsp:include page="header.jsp"></jsp:include>
-		<div class="table-responsive">
-			<table class="table">
-				<thead>
-					<tr>
-						<th>№</th>
-						<th><bean:message key="fareFamily.jsp.fareFamilyCode" /></th>
-						<th><bean:message key="fareFamily.jsp.ancillaryAirComponentCode" /></th>
-					</tr>
-				</thead>
-				<tbody>
-					<datalex:reservation />
-					<logic:iterate name="reservation" property="fareFamilies"
-						id="fareF" indexId="index">
-						<logic:iterate name="fareF" property="components" id="component">
-						<tr>
-							<td><bean:write name="index" /></td>
-							<td><bean:write name="fareF" property="fareFamilyCode" /></td>
-							<td><bean:write name="component" property="ancillaryAirComponentCode" /></td>
-						</tr>
-						</logic:iterate>
-					</logic:iterate>
-				</tbody>
-			</table>
-		</div>
-		<jsp:include page="footer.jsp"></jsp:include>
+		<tiles:insert definition="company-template">
+			<tiles:put name="body" value="/WEB-INF/views/layouts/fareFamily-body.jsp"/>
+		</tiles:insert>
 	</div>
 </body>
 </html:html>
-

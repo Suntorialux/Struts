@@ -10,13 +10,13 @@ import javax.xml.bind.JAXBException;
 import javax.xml.bind.Unmarshaller;
 
 import com.epam.by.beans.Reservation;
-import com.epam.by.ifaces.IXmlDAO;
+import com.epam.by.ifaces.IReservationDAO;
 
 /**
  * @author Andrei Yahorau
  *
  */
-public class XmlDAO implements IXmlDAO {
+public class XmlDAO implements IReservationDAO {
 
 	@Override
 	public Reservation getReservation(String fileName) {
